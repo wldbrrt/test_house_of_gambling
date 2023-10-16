@@ -1,0 +1,43 @@
+.language-switch {
+  position: relative;
+
+  .language-switch__checkbox {
+    position: absolute;
+    border-radius: 24px;
+    width: 23%;
+    height: 81%;
+    border-radius: 24px;
+    top: 1px;
+    transition: 300ms;
+    left: 0px;
+
+    &::after {
+      content: "";
+      top: 0;
+      left: -3px;
+      width: 226%;
+      height: 100%;
+      position: absolute;
+      background-color: $COLOR_MAIN_NAVY_BLUE;
+      background-image: url("/src/Assets/icons/language_icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 24px;
+    }
+
+    &:checked {
+      left: 33px;
+    }
+  }
+
+  .language-switch__container {
+    display: flex;
+    gap: 5px;
+
+    .language-switch__RU {
+    }
+
+    .language-switch__EN {
+    }
+  }
+}

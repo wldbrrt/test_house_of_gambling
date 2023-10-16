@@ -1,0 +1,41 @@
+.navigation {
+  justify-self: center;
+  align-self: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  @media only screen and (max-width: 1500px) {
+    justify-self: flex-start;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .navigation__list {
+    display: flex;
+    color: $COLOR_MAIN_WHITE;
+    list-style: none;
+    @include font_main;
+    gap: 32px;
+    padding: 0 0;
+
+    @media only screen and (max-width: 1100px) {
+      gap: 8px;
+    }
+
+    .navigation_item {
+    }
+
+    .navigation__link {
+      text-decoration: none;
+      color: $COLOR_MAIN_WHITE;
+      transition: 300ms;
+
+      &:hover {
+        color: $COLOR_MAIN_BLUE;
+        text-decoration: underline;
+      }
+    }
+  }
+}

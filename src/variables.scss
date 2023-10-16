@@ -1,0 +1,78 @@
+$COLOR_ADDITIONAL_PURPLE: #9dadf2;
+$COLOR_MAIN_BLUE: #478bf9;
+$COLOR_MAIN_DEEP_BLUE: #1e1231;
+$COLOR_MAIN_NAVY_BLUE: #110a1d;
+$COLOR_MAIN_WHITE: #fff;
+$COLOR_TRANSP_WHITE: rgba(255, 255, 255, 0.6);
+$COLOR_TRANSP_WHITE_012: rgba(255, 255, 255, 0.12);
+
+@mixin wrapper {
+  max-width: 1640px;
+  margin: 0 auto;
+}
+
+@mixin button {
+  display: flex;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+  border: 2px solid $COLOR_ADDITIONAL_PURPLE;
+  background: $COLOR_MAIN_NAVY_BLUE;
+  height: 48px;
+}
+
+@mixin font_main {
+  color: $COLOR_MAIN_WHITE;
+  font-family: Lexend;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin font_blog {
+  color: $COLOR_MAIN_WHITE;
+  font-family: Lexend;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+}
+
+@mixin font_blog_date {
+  color: $COLOR_TRANSP_WHITE;
+  font-feature-settings: "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 16px; /* 114.286% */
+}
+
+@mixin title_h1 {
+  color: $COLOR_MAIN_WHITE;
+  font-family: Lexend;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 96px;
+}
+
+@mixin title_h2 {
+  color: $COLOR_MAIN_WHITE;
+  font-family: Lexend;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 100% */
+}
+
+@mixin title__h4 {
+  color: $COLOR_TRANSP_WHITE;
+  font-family: Lexend;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
