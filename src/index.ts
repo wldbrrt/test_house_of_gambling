@@ -3,7 +3,10 @@ import "./index.scss";
 import { getNews } from "./Api/newsApi/news";
 import { TNewsItem } from "./Api/newsApi/types";
 import { popBurgerMenu } from "./Blocks/header/burgermenu/burgermenu";
-import { toggleLanguageSelectBLock } from "./Blocks/header/language-switch/language-switch";
+import {
+  languageSelectBlock,
+  toggleLanguageSelectBLock,
+} from "./Blocks/header/language-switch/language-switch";
 
 const createBlogElements = async () => {
   const blogContainer = document.querySelector(".blog__container");
@@ -45,3 +48,12 @@ burgerMenuButton.addEventListener("click", popBurgerMenu);
 const languageButton = document.querySelector(".burgermenu__languages");
 
 languageButton.addEventListener("click", toggleLanguageSelectBLock);
+
+window.addEventListener("click", (e) => {
+  if (
+    e.target !== languageSelectBlock &&
+    languageSelectBlock.classList.contains("burgermenu__language-popup_active")
+  ) {
+    languageSelectBlock.classList.toggle("burgermenu__language-popup_active");
+  }
+});
